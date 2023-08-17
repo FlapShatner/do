@@ -1,0 +1,6 @@
+@layer variables {
+    :root {
+        --text-p: hsl(180, 16%, 87%);
+        --bg: #1B1B1B;
+    }
+}

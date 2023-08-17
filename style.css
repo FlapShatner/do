@@ -1,0 +1,72 @@
+@import "reset.css";
+@import "variables.css";
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500&display=swap');
+@layer reset,
+variables,
+styles;
+
+
+@layer styles {
+    body {
+        padding-block: 2rem;
+        background: var(--bg);
+        font-family: 'Bricolage Grotesque', sans-serif;
+    }
+
+    input:checked~span {
+        text-decoration: line-through;
+    }
+
+    input {
+        appearance: none;
+        background-color: transparent;
+        font: inherit;
+        color: currentColor;
+        width: 1.15rem;
+        height: 1.15rem;
+        border: 1px solid currentColor;
+        border-radius: 0.15rem;
+        transform: translateY(.5rem);
+    }
+
+    input:checked {
+        background-color: var(--text-p);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: var(--text-p);
+    }
+
+    ul {
+        padding-inline: 0;
+        color: var(--text-p)
+    }
+
+    li {
+        list-style: none;
+        padding-block: .5rem;
+        display: flex;
+        text-align: center;
+        gap: .5rem;
+    }
+
+    span {
+        font-size: 1.5rem;
+        padding-left: .5rem;
+    }
+
+    .container {
+        height: 100%;
+        width: max-content;
+        margin: 0 auto;
+        padding: 1rem 2rem 2rem;
+        border: 2px solid var(--text-p)
+    }
+
+    .divider {
+        margin-block: 1rem;
+        height: 1px;
+        border: 1px solid var(--text-p);
+    }
+}
