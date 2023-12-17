@@ -17,14 +17,25 @@
         <div>
             <h1>Do These Things:</h1>
             <div class='divider'></div>
-            <input id='new'
-                   type="text">
-            <button id='addTaskButton'>New</button>
+            <div class='add'>
+                <input id='new'
+                       type="text">
+                <button id='addTaskButton'><svg xmlns="http://www.w3.org/2000/svg"
+                         width="32"
+                         height="32"
+                         viewBox="0 0 15 15">
+                        <path fill="none"
+                              stroke="currentColor"
+                              d="M7.5 1v13M1 7.5h13" />
+                    </svg></button>
+
+            </div>
 
             <ul id='taskList'>
             </ul>
         </div>
-        <button id='showCompleted'>Show Completed Tasks</button>
+        <button class='show'
+                id='showCompleted'>Show Completed Tasks</button>
     </div>
     <script src='script.js'
             defer></script>

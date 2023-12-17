@@ -1,6 +1,7 @@
 @layer variables {
     :root {
         --text-p: hsl(180, 16%, 87%);
+        --text-p-30: hsla(180, 15%, 87%, 0.3);
         --bg: #1B1B1B;
     }
 }
