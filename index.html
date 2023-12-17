@@ -7,43 +7,27 @@
           content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"
           href="style.css" />
+
     <title>Do This</title>
 </head>
 
 <body>
+
     <div class='container'>
+        <div>
+            <h1>Do These Things:</h1>
+            <div class='divider'></div>
+            <input id='new'
+                   type="text">
+            <button id='addTaskButton'>New</button>
 
-        <h1>Do These Things:</h1>
-        <div class='divider'></div>
-        <ul>
-            <li>
-                <input type="checkbox"
-                       name="one"
-                       id="1" />
-                <span>Apply for jobs at least 2 hours</span>
-            </li>
-
-            <li>
-                <input type="checkbox"
-                       name="two"
-                       id="2" />
-                <span>Look for gigs at least 2 hours</span>
-            </li>
-            <li>
-                <input type="checkbox"
-                       name="three"
-                       id="3" />
-                <span>Work on personal projects</span>
-            </li>
-
-            <li>
-                <input type="checkbox"
-                       name="four"
-                       id="4" />
-                <span>Find OSS project to contribute to</span>
-            </li>
-        </ul>
+            <ul id='taskList'>
+            </ul>
+        </div>
+        <button id='showCompleted'>Show Completed Tasks</button>
     </div>
+    <script src='script.js'
+            defer></script>
 </body>
 
 </html>

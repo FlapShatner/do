@@ -17,7 +17,7 @@ styles;
         text-decoration: line-through;
     }
 
-    input {
+    input[type=checkbox] {
         appearance: none;
         background-color: transparent;
         font: inherit;
@@ -51,7 +51,7 @@ styles;
         gap: .5rem;
     }
 
-    span {
+    label {
         font-size: 1.5rem;
         padding-left: .5rem;
     }
@@ -61,7 +61,10 @@ styles;
         width: max-content;
         margin: 0 auto;
         padding: 1rem 2rem 2rem;
-        border: 2px solid var(--text-p)
+        border: 2px solid var(--text-p);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .divider {
