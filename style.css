@@ -21,6 +21,7 @@ styles;
         background: var(--bg);
         border: 1px solid var(--text-p);
         width: 100%;
+        color: var(--text-p);
     }
 
     input[type=checkbox] {
@@ -28,7 +29,7 @@ styles;
         background-color: transparent;
         font: inherit;
         color: currentColor;
-        width: 1.15rem;
+        min-width: 1.15rem;
         height: 1.15rem;
         border: 1px solid currentColor;
         border-radius: 0.15rem;
@@ -53,8 +54,10 @@ styles;
         list-style: none;
         padding-block: .5rem;
         display: flex;
-        text-align: center;
+        text-align: start;
         gap: .5rem;
+        max-height: 10rem;
+        overflow: hidden;
     }
 
     label {
@@ -65,8 +68,9 @@ styles;
     .container {
         height: 100%;
         width: max-content;
+        max-width: 390px;
         margin: 0 auto;
-        padding: 1rem 2rem 2rem;
+        padding: 1rem 2rem 1rem;
         border: 2px solid var(--text-p);
         display: flex;
         flex-direction: column;
@@ -82,6 +86,7 @@ styles;
     .add {
         display: flex;
         gap: .5rem;
+        margin-block: 1rem;
     }
 
     .show {
@@ -100,5 +105,16 @@ styles;
         background: var(--text-p);
         color: var(--bg);
 
+    }
+
+    .task {
+        max-width: 300px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 }

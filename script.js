@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
  // Load tasks from local storage or set default if not available
  let tasks = JSON.parse(localStorage.getItem('tasks')) || [
-  { id: 1, title: 'Go grocery shopping', notes: '', completed: false },
-  { id: 2, title: 'Get coffee maker', notes: '', completed: false },
-  { id: 3, title: "Work on John's project", notes: '', completed: false },
+  { id: 1, title: 'Create a new task', notes: '', completed: false },
+  
  ]
 
  const taskList = document.getElementById('taskList')
@@ -26,13 +25,28 @@ document.addEventListener('DOMContentLoaded', () => {
   })
  }
 
+ const removeCompletedButton = document.getElementById('removeCompleted');
+
+const removeCompletedTasks = () => {
+  tasks = tasks.filter(task => !task.completed); // Keep only uncompleted tasks
+  saveTasks(); // Save the updated tasks list to local storage
+
+  // Update the displayed task list
+  taskList.innerHTML = ''; // Clear the current list
+  tasks.forEach(renderTask); // Render the updated list
+};
+
+removeCompletedButton.addEventListener('click', removeCompletedTasks);
+
+
  const renderTask = (task) => {
   const li = document.createElement('li')
   li.id = `task-li-${task.id}`
+    li.className = 'task'
 
   const checkbox = document.createElement('input')
   checkbox.type = 'checkbox'
-  checkbox.id = `task-${task.id}`
+  checkbox.id = `task-${task.id}`  
   checkbox.checked = task.completed
 
   addCheckboxListener(checkbox, task, li)
@@ -79,6 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
     taskLi.style.display = showingCompletedTasks ? '' : 'none'
    }
   })
+
+  removeCompletedButton.style.display = showingCompletedTasks ? '' : 'none'
 
   showHiddenTasksButton.textContent = showingCompletedTasks ? 'Hide Completed Tasks' : 'Show Completed Tasks'
  })
