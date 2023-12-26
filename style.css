@@ -89,7 +89,8 @@ styles;
         margin-block: 1rem;
     }
 
-    .show {
+    .show,
+    .clear {
         background: var(--bg);
         color: var(--text-p);
         border: 1px solid var(--text-p);
@@ -101,6 +102,7 @@ styles;
         transition: ease-in-out 100ms;
     }
 
+    .clear:hover,
     .show:hover {
         background: var(--text-p);
         color: var(--bg);
