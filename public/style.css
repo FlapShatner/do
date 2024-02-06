@@ -21,6 +21,7 @@ styles;
         background: var(--bg);
         border: 1px solid var(--text-p);
         width: 100%;
+        color: var(--text-p)
     }
 
     input[type=checkbox] {
