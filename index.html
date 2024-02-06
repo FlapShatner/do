@@ -2,43 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"
-          href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+        href="style.css" />
 
-    <title>Do This</title>
+  <title>Do This</title>
 </head>
 
 <body>
+  <div class="container">
+    <div>
+      <h1>Do These Things:</h1>
+      <div class="divider"></div>
+      <div class="add">
+        <input id="new"
+               type="text" />
+        <button id="addTaskButton">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="32"
+               height="32"
+               viewBox="0 0 15 15">
+            <path fill="none"
+                  stroke="currentColor"
+                  d="M7.5 1v13M1 7.5h13" />
+          </svg>
+        </button>
+      </div>
 
-    <div class='container'>
-        <div>
-            <h1>Do These Things:</h1>
-            <div class='divider'></div>
-            <div class='add'>
-                <input id='new'
-                       type="text">
-                <button id='addTaskButton'><svg xmlns="http://www.w3.org/2000/svg"
-                         width="32"
-                         height="32"
-                         viewBox="0 0 15 15">
-                        <path fill="none"
-                              stroke="currentColor"
-                              d="M7.5 1v13M1 7.5h13" />
-                    </svg></button>
-
-            </div>
-
-            <ul id='taskList'>
-            </ul>
-        </div>
-        <button class='show'
-                id='showCompleted'>Show Completed Tasks</button>
+      <ul id="taskList"></ul>
     </div>
-    <script src='script.js'
-            defer></script>
+    <div class="buttons">
+      <button class='clear'
+              style="display: none;"
+              id="removeCompleted">Clear All Completed Tasks</button>
+      <button class="show"
+              id="showCompleted">Show Completed Tasks</button>
+    </div>
+  </div>
+  <script src="script.js"
+          defer></script>
 </body>
 
 </html>
